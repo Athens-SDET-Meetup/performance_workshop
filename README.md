@@ -1,5 +1,5 @@
 # devoxx_workshop
-##Evaluate Performance at Massive Scale workshop
+## Evaluate Performance at Massive Scale workshop
 
 Performance testing is the practice that helps us verify the reliability and performance of our applications.
 
@@ -7,7 +7,7 @@ Reliability has become paramount, and it is now a shared responsibility across a
 
 Grafana k6 is a modern, open-source performance testing tool scriptable in Javascript. This interactive workshop provides participants with hands-on experience writing k6 performance tests, giving an overview of performance testing practices and various options for using k6 through practical examples with a demo app.Participants will use Docker compose to install locally a demo environment. 
 
-##Objectives:
+## Objectives:
 - Learn performance testing fundamentals and guidelines
 
 - Implement different type of load tests and browser performance tests
