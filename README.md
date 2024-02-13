@@ -14,11 +14,11 @@
     - [(2.5) Thresholds](#25-thresholds)
     - [(2.6) Import data from a file](#26-import-data-from-a-file)
     - [(2.7) Visualize the results over time with Prometheus and Grafana](#27-visualize-the-results-over-time-with-prometheus-and-grafana)
-    - [(2.8) More stuff](#28-more-stuff)
+    - [(2.8) More details :face\_with\_spiral\_eyes:](#28-more-details-face_with_spiral_eyes)
       - [(2.8.1) Lifecycle](#281-lifecycle)
       - [(2.8.2) CLI overrides and environment variables](#282-cli-overrides-and-environment-variables)
       - [(2.8.3) Custom metrics](#283-custom-metrics)
-      - [(2.8.4) Custom summary](#284-custom-summary)
+      - [(2.8.4) Summary Reporter](#284-summary-reporter)
   - [(3) Running k6 in CI](#3-running-k6-in-ci)
     - [(3.1) GitHub Actions](#31-github-actions)
     - [(3.2) Other CI providers](#32-other-ci-providers)
@@ -31,8 +31,8 @@
       - [(4.3.3) Extensions](#433-extensions)
       - [(4.3.4) WebSockets](#434-websockets)
   - [(5) More things](#5-more-things)
-    - [(5.1) Grafana Cloud k6](#51-grafana-cloud-k6)
-    - [(5.2) Fault Injection](#52-fault-injection)
+    - [(5.1) Grafana Cloud k6 :cloud:](#51-grafana-cloud-k6-cloud)
+    - [(5.2) Fault Injection :x:](#52-fault-injection-x)
     - [(5.3) Kubernetes Operator](#53-kubernetes-operator)
 
 
@@ -389,7 +389,7 @@ You should see a dashboard with some metrics, that are being updated in real tim
 
 You can learn more about [outputs](https://k6.io/docs/results-output/overview/) in our docs.
 
-### (2.8) More stuff
+### (2.8) More details :face_with_spiral_eyes:
 
 In case you have time (now or later), here are some more things that you can learn about and try out.
 
@@ -492,7 +492,7 @@ When you run the test, you should be able to see these new metrics in the summar
 
 You can learn more about metrics [in our docs](https://k6.io/docs/using-k6/metrics/).
 
-#### (2.8.4) Custom summary
+#### (2.8.4) Summary Reporter
 
 You have already seen multiple times the end-of-test summary. You can customize it! 
 
@@ -910,13 +910,13 @@ You can learn more about WebSockets [in our docs](https://k6.io/docs/javascript-
 
 ## (5) More things
 
-Wow, if you have reached this point, you have learned a lot about k6. But there is more!
+Wow, if you have reached this point, you have learned a lot about k6 :partying_face:. But there is more!
 
 Our docs page is the best place to learn about all the things we missed and more: https://k6.io/docs/
 
 Still, here are a few things that we have missed that you might find interesting.
 
-### (5.1) Grafana Cloud k6
+### (5.1) Grafana Cloud k6 :cloud:
 
 It is our Cloud offering. It is the natural continuation of k6 OSS.
 
@@ -926,7 +926,7 @@ We have an **actually useful** free tier, so, yeah, if that sounds interesting, 
 
 ![cloud](./media/cloud.png)
 
-### (5.2) Fault Injection
+### (5.2) Fault Injection :x:
 
 We have a fault injection library. It is called [Disruptor](https://k6.io/docs/javascript-api/xk6-disruptor/). 
 
