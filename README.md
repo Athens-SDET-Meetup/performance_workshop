@@ -128,7 +128,7 @@ Then, run it with:
 # If you have k6 installed
 k6 run example.js
 # If you don't have k6 installed
-docker run -i --network=devfest-santiago_default grafana/k6:0.47.0 run -e BASE_URL=http://quickpizza:3333  - <example.js
+docker run -i --network=devoxx_default grafana/k6:0.47.0 run -e BASE_URL=http://quickpizza:3333  - <example.js
 ```
 That's it :muscle:! You have successfully run your first test :grinning:
 
@@ -287,7 +287,7 @@ You can also inspect the status code of the test with:
 echo $?
 
 # If you don't have k6 installed
-docker run -i --network=devfest-santiago_default grafana/k6:0.47.0 run -e BASE_URL=http://quickpizza:3333  - <example.js; echo $?
+docker run -i --network=devoxx_default grafana/k6:0.47.0 run -e BASE_URL=http://quickpizza:3333  - <example.js; echo $?
 ```
 
 Then, rerun the script.
@@ -372,7 +372,7 @@ You just need to change how you invoke k6, and add the Prometheus output:
 k6 run --out=experimental-prometheus-rw example.js
 
 # If you don't have k6 installed
-docker run -i --network=devfest-santiago_default grafana/k6:0.47.0 run --out=experimental-prometheus-rw -e BASE_URL=http://quickpizza:3333 -e K6_PROMETHEUS_RW_SERVER_URL=http://prometheus:9090/api/v1/write - <example.js
+docker run -i --network=devoxx_default grafana/k6:0.47.0 run --out=experimental-prometheus-rw -e BASE_URL=http://quickpizza:3333 -e K6_PROMETHEUS_RW_SERVER_URL=http://prometheus:9090/api/v1/write - <example.js
 ```
 
 Then, run the script again. After that, open http://localhost:3000. 
@@ -524,7 +524,7 @@ You can learn more about this [in our docs](https://k6.io/docs/results-output/en
 
 We are going to use GitHub Actions to run one of our tests. You can do this in multiple ways (manually installing it, with the Docker container, etc.), but in this case, we are going to use the k6 GitHub Action.
 
-Start by forking this repository  (yup, the devfest-santiago repo). First, click in `Fork`:
+Start by forking this repository  (yup, the devoxx_workshop repo). First, click in `Fork`:
 ![fork](./media/fork_button.png)
 
 Then, click on `Create fork`.
@@ -678,7 +678,7 @@ Then, rerun the script. You should see an additional log line with the pizza nam
 k6 run example.js
 
 # If you don't have k6 installed (you need to mount the extra file)
-docker run -i --network=devfest-santiago_default -v $(pwd)/utils.js:/utils.js grafana/k6:0.47.0 run -e BASE_URL=http://quickpizza:3333  - <example.js
+docker run -i --network=devoxx_default -v $(pwd)/utils.js:/utils.js grafana/k6:0.47.0 run -e BASE_URL=http://quickpizza:3333  - <example.js
 ```
 
 You can learn more about modules [in our docs](https://k6.io/docs/using-k6/modules/).
@@ -744,7 +744,7 @@ k6 run browser.js
 
 If you want to use Docker, you can:
 ```bash
-docker run -i --network=devfest-santiago_default --cap-add=SYS_ADMIN grafana/k6:0.47.0-with-browser run  -e BASE_URL=http://quickpizza:3333 - <browser.js
+docker run -i --network=devoxx_default --cap-add=SYS_ADMIN grafana/k6:0.47.0-with-browser run  -e BASE_URL=http://quickpizza:3333 - <browser.js
 
 # Find the container ID of that container you just ran
 docker container ls -a
