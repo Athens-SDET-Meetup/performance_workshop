@@ -136,8 +136,6 @@ That's it :muscle:! You have successfully run your first test :grinning:
 Now, you have a lot of things in the output. Let's go through them.
 
 k6's output has three main sections:
-
-k6's output has three main sections:
 - 1. Information about the test and its configuration.
   - Why: To quickly understand the test configuration and how it will run.
 - 2. Runtime information (e.g., logs).
