@@ -98,11 +98,12 @@ Also, open http://localhost:3000 and verify that you can see a Grafana instance.
 
 To run your first test just copy the following
 
+
+```
 import http from "k6/http";
 
 const BASE_URL = __ENV.BASE_URL || 'http://localhost:3333';
 
-```
 export default function () {
   let restrictions = {
     maxCaloriesPerSlice: 500,
