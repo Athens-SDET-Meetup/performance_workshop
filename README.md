@@ -459,10 +459,10 @@ By default, k6 automatically collects built-in metrics. Besides built-ins, you c
 
 Metrics fall into four broad types:
 
-- Counters: sum values.
-- Gauges: track the smallest, largest, and latest values.
-- Rates: track how frequently a non-zero value occurs.
-- Trends: calculates statistics for multiple values (like mean, mode or percentile).
+- **Counters**: sum values.
+- **Gauges**: track the smallest, largest, and latest values.
+- **Rates**: track how frequently a non-zero value occurs.
+- **Trends**: calculates statistics for multiple values (like mean, mode or percentile).
 
 You can create them by using our metrics library. Let's try it out!
 
