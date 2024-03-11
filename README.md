@@ -15,12 +15,12 @@
     - [(2.6) Import data from a file :open_file_folder:](#26-import-data-from-a-file)
     - [(2.7) Visualize the results over time with Prometheus and Grafana :partying_face:](#27-visualize-the-results-over-time-with-prometheus-and-grafana)
     - [(2.8) More details :face\_with\_spiral\_eyes:](#28-more-details-face_with_spiral_eyes)
-      - [(2.8.1) Lifecycle](#281-lifecycle)
-      - [(2.8.2) CLI overrides and environment variables](#282-cli-overrides-and-environment-variables)
-      - [(2.8.3) Custom metrics](#283-custom-metrics)
-      - [(2.8.4) Summary Reporter](#284-summary-reporter)
+      - [(2.8.1) Lifecycle :globe_with_meridians:](#281-lifecycle)
+      - [(2.8.2) CLI overrides and environment variables :earth_americas:](#282-cli-overrides-and-environment-variables)
+      - [(2.8.3) Custom metrics :placard:](#283-custom-metrics)
+      - [(2.8.4) Summary Reporter :chart_with_upwards_trend:](#284-summary-reporter)
   - [(3) Running k6 in CI](#3-running-k6-in-ci)
-    - [(3.1) GitHub Actions](#31-github-actions)
+    - [(3.1) GitHub Actions :octocat:](#31-github-actions)
     - [(3.2) Other CI providers](#32-other-ci-providers)
   - [(4) Advanced](#4-advanced)
     - [(4.1) Scenarios](#41-scenarios)
@@ -392,7 +392,7 @@ You can learn more about [outputs](https://k6.io/docs/results-output/overview/) 
 
 In case you have time (now or later), here are some more things that you can learn about and try out.
 
-#### (2.8.1) Lifecycle
+#### (2.8.1) Lifecycle :globe_with_meridians:	
 
 In k6, there are four lifecycle stages.
 
@@ -429,7 +429,7 @@ export function setup() {
 
 You can learn more about the lifecycle functions [in our docs](https://k6.io/docs/using-k6/test-lifecycle/).
 
-#### (2.8.2) CLI overrides and environment variables
+#### (2.8.2) CLI overrides and environment variables :earth_americas:
 
 Most things you can configure in the `options` block can also be overridden via the CLI. For example, you can override the number of VUs with the `--vus` flag and the duration with the `--duration` flag.
 
@@ -453,7 +453,7 @@ If you noticed, we have been using the `BASE_URL` environment variable to pass t
 
 You can learn more about [how options work](https://k6.io/docs/using-k6/k6-options/how-to/) and [environment variables](https://k6.io/docs/using-k6/environment-variables/) in our docs.
 
-#### (2.8.3) Custom metrics
+#### (2.8.3) Custom metrics :placard:
 
 By default, k6 automatically collects built-in metrics. Besides built-ins, you can also make custom metrics.
 
@@ -491,7 +491,7 @@ When you run the test, you should be able to see these new metrics in the summar
 
 You can learn more about metrics [in our docs](https://k6.io/docs/using-k6/metrics/).
 
-#### (2.8.4) Summary Reporter
+#### (2.8.4) Summary Reporter :chart_with_upwards_trend:
 
 You have already seen multiple times the end-of-test summary. You can customize it! 
 
@@ -519,7 +519,7 @@ You can learn more about this [in our docs](https://k6.io/docs/results-output/en
 
 ## (3) Running k6 in CI
 
-### (3.1) GitHub Actions
+### (3.1) GitHub Actions :octocat:
 
 We are going to use GitHub Actions to run one of our tests. You can do this in multiple ways (manually installing it, with the Docker container, etc.), but in this case, we are going to use the k6 GitHub Action.
 
