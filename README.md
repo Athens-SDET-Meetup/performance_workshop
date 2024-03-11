@@ -2,18 +2,18 @@
 
 - [Evaluate Performance at Massive Scale workshop](#evaluate-performance-at-massive-scale-workshop)
   - [(1) Workshop Intro](#1-workshop-intro)
-    - [(1.1) Introduction](#11-introduction)
-    - [(1.2) Prerequisites](#12-prerequisites)
+    - [(1.1) Introduction :nerd_face:](#11-introduction)
+    - [(1.2) Prerequisites :dependabot:	](#12-prerequisites)
     - [(1.3) Playground :soccer:](#13-playground-soccer)
   - [(2) Foundations](#2-foundations)
     - [(2.1) First Test :test\_tube:](#21-first-test-test_tube)
-    - [(2.2) VUs and Iterations](#22-vus-and-iterations)
+    - [(2.2) VUs and Iterations :electron:](#22-vus-and-iterations)
       - [(2.2.1) Think Time :thinking:](#221-think-time-thinking)
-      - [(2.2.2) Stages](#222-stages)
-    - [(2.4) Checks](#24-checks)
-    - [(2.5) Thresholds](#25-thresholds)
-    - [(2.6) Import data from a file](#26-import-data-from-a-file)
-    - [(2.7) Visualize the results over time with Prometheus and Grafana](#27-visualize-the-results-over-time-with-prometheus-and-grafana)
+      - [(2.2.2) Stages :octocat:](#222-stages)
+    - [(2.4) Checks :green_circle:](#24-checks)
+    - [(2.5) Thresholds :red_circle:](#25-thresholds)
+    - [(2.6) Import data from a file :open_file_folder:](#26-import-data-from-a-file)
+    - [(2.7) Visualize the results over time with Prometheus and Grafana :partying_face:](#27-visualize-the-results-over-time-with-prometheus-and-grafana)
     - [(2.8) More details :face\_with\_spiral\_eyes:](#28-more-details-face_with_spiral_eyes)
       - [(2.8.1) Lifecycle](#281-lifecycle)
       - [(2.8.2) CLI overrides and environment variables](#282-cli-overrides-and-environment-variables)
@@ -38,7 +38,7 @@
 
 ## (1) Workshop Intro
 
-### (1.1) Introduction
+### (1.1) Introduction :nerd_face:
 
 Performance testing is the practice that helps us verify the reliability and performance of our applications.
 
@@ -62,7 +62,7 @@ Grafana k6 is a modern, open-source performance testing tool scriptable in Javas
 
 - Extend k6 using extensions
 
-### (1.2) Prerequisites
+### (1.2) Prerequisites :dependabot:	
 
 We need requirements to follow the hands-on lab today
 
@@ -146,7 +146,7 @@ k6's output has three main sections:
 In the output's second section, you should see a log line with the pizza name and the number of ingredients. This happens once because k6 has run your default function once. You can also see in the third section lots of metrics that k6 has generated and aggregated for you. These metrics are helpful to understand how the test went (e.g., the number of requests, errors, response time, etc.).
 
 
-### (2.2) VUs and Iterations
+### (2.2) VUs and Iterations :electron:
 
 In k6, we have two main concepts: Virtual Users (VUs) and iterations. A VU is a virtual user. It's a thread that runs your script. It's the basic unit of execution in k6. An iteration is a single execution of your script. In the example above, it's a single run of your default function.
 
@@ -183,7 +183,7 @@ Now, we are getting a pizza recommendation every second. That's better. The numb
 
 If you want more or less requests per second, you can change the number of VUs (or the sleep time!).
 
-#### (2.2.2) Stages
+#### (2.2.2) Stages :octocat:
 
 Now, let's try to model a more realistic scenario. We want to simulate a ramp-up of users, then a peak, and then a ramp-down. 
 
@@ -211,7 +211,7 @@ What's k6 doing :nerd_face:?
 
 > TIP: You can always finish the test early by pressing CTRL+C. The summary will still be generated for the data k6 has collected so far.
 
-### (2.4) Checks
+### (2.4) Checks :green_circle:
 
 Another problem with our script is that we don't validate if the service is working as expected. We are just blindly sending requests and hoping for the best. We can do better than that! We can add checks to our script.
 
@@ -244,7 +244,7 @@ check(res, {
 
 You can learn more about checks [in our docs](https://k6.io/docs/using-k6/checks/).
 
-### (2.5) Thresholds
+### (2.5) Thresholds :red_circle:
 
 Thresholds are the pass/fail criteria you define for your test metrics. If the system under test (SUT) does not meet the conditions of your threshold, the test finishes with a failed status. That means that k6 will exit with a non-zero exit code. You can leverage standard metrics that k6 generates or custom metrics that you define in your script (we will see more about this later).
 
@@ -302,7 +302,7 @@ thresholds: {
 
 You can learn more about thresholds [in our docs](https://k6.io/docs/using-k6/thresholds/).
 
-### (2.6) Import data from a file
+### (2.6) Import data from a file :open_file_folder:
 
 So far, we have been using some hard-coded data. Let's change that! 
 
@@ -357,7 +357,7 @@ You verify this by running `docker-compose logs quickpizza`.
 
 You can learn more about data parameterization in k6 [in our docs](https://k6.io/docs/examples/data-parameterization/).
 
-### (2.7) Visualize the results over time with Prometheus and Grafana
+### (2.7) Visualize the results over time with Prometheus and Grafana :partying_face:
 
 The output of k6 is nice, but it's not possible understand how the metrics evolved over time.
 
