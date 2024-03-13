@@ -66,9 +66,9 @@ Grafana k6 is a modern, open-source performance testing tool scriptable in Javas
 
 We need requirements to follow the hands-on lab today
 
-* Docker Engine
-* VS Code
-* Optional: k6
+* [Docker Engine](https://docs.docker.com/engine/install/)
+* [VS Code](https://code.visualstudio.com/download)
+* Optional: [k6](https://k6.io/docs/get-started/installation/)
   * You can run it inside Docker, but the experience is better if you install it locally.
     * You get nice colors and dynamic progress bars!
     * Also, it is just a binary, so you can easily remove it afterward if you don't want it.
