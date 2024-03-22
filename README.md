@@ -2,25 +2,25 @@
 
 - [Evaluate Performance at Massive Scale workshop](#evaluate-performance-at-massive-scale-workshop)
   - [(1) Workshop Intro](#1-workshop-intro)
-    - [(1.1) Introduction :nerd_face:](#11-introduction)
-    - [(1.2) Prerequisites :dependabot:	](#12-prerequisites)
+    - [(1.1) Introduction :nerd\_face:](#11-introduction-nerd_face)
+    - [(1.2) Prerequisites :dependabot:](#12-prerequisites-dependabot)
     - [(1.3) Playground :soccer:](#13-playground-soccer)
   - [(2) Foundations](#2-foundations)
     - [(2.1) First Test :test\_tube:](#21-first-test-test_tube)
-    - [(2.2) VUs and Iterations :electron:](#22-vus-and-iterations)
+    - [(2.2) VUs and Iterations :electron:](#22-vus-and-iterations-electron)
       - [(2.2.1) Think Time :thinking:](#221-think-time-thinking)
-      - [(2.2.2) Stages :octocat:](#222-stages)
-    - [(2.4) Checks :green_circle:](#24-checks)
-    - [(2.5) Thresholds :red_circle:](#25-thresholds)
-    - [(2.6) Import data from a file :open_file_folder:](#26-import-data-from-a-file)
-    - [(2.7) Visualize the results over time with Prometheus and Grafana :partying_face:](#27-visualize-the-results-over-time-with-prometheus-and-grafana)
+      - [(2.2.2) Stages :octocat:](#222-stages-octocat)
+    - [(2.4) Checks :green\_circle:](#24-checks-green_circle)
+    - [(2.5) Thresholds :red\_circle:](#25-thresholds-red_circle)
+    - [(2.6) Import data from a file :open\_file\_folder:](#26-import-data-from-a-file-open_file_folder)
+    - [(2.7) Visualize the results over time with Prometheus and Grafana :partying\_face:](#27-visualize-the-results-over-time-with-prometheus-and-grafana-partying_face)
     - [(2.8) More details :face\_with\_spiral\_eyes:](#28-more-details-face_with_spiral_eyes)
-      - [(2.8.1) Lifecycle :globe_with_meridians:](#281-lifecycle)
-      - [(2.8.2) CLI overrides and environment variables :earth_americas:](#282-cli-overrides-and-environment-variables)
-      - [(2.8.3) Custom metrics :placard:](#283-custom-metrics)
-      - [(2.8.4) Summary Reporter :chart_with_upwards_trend:](#284-summary-reporter)
+      - [(2.8.1) Lifecycle :globe\_with\_meridians:](#281-lifecycle-globe_with_meridians)
+      - [(2.8.2) CLI overrides and environment variables :earth\_americas:](#282-cli-overrides-and-environment-variables-earth_americas)
+      - [(2.8.3) Custom metrics :placard:](#283-custom-metrics-placard)
+      - [(2.8.4) Summary Reporter :chart\_with\_upwards\_trend:](#284-summary-reporter-chart_with_upwards_trend)
   - [(3) Running k6 in CI](#3-running-k6-in-ci)
-    - [(3.1) GitHub Actions :octocat:](#31-github-actions)
+    - [(3.1) GitHub Actions :octocat:](#31-github-actions-octocat)
     - [(3.2) Other CI providers](#32-other-ci-providers)
   - [(4) Advanced](#4-advanced)
     - [(4.1) Scenarios](#41-scenarios)
@@ -129,7 +129,7 @@ Then, run it with:
 # If you have k6 installed
 k6 run example.js
 # If you don't have k6 installed
-docker run -i --network=performance_default grafana/k6:0.47.0 run -e BASE_URL=http://quickpizza:3333  - <example.js
+docker run -i --network=performance_workshop_default grafana/k6:0.47.0 run -e BASE_URL=http://quickpizza:3333  - <example.js
 ```
 That's it :muscle:! You have successfully run your first test :grinning:
 
