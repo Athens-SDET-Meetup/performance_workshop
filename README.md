@@ -19,6 +19,7 @@
       - [(2.8.2) CLI overrides and environment variables :earth\_americas:](#282-cli-overrides-and-environment-variables-earth_americas)
       - [(2.8.3) Custom metrics :placard:](#283-custom-metrics-placard)
       - [(2.8.4) Summary Reporter :chart\_with\_upwards\_trend:](#284-summary-reporter-chart_with_upwards_trend)
+      - [(2.8.5) Web dashboard](#285-web-dashboard)
   - [(3) Running k6 in CI](#3-running-k6-in-ci)
     - [(3.1) GitHub Actions :octocat:](#31-github-actions-octocat)
     - [(3.2) Other CI providers](#32-other-ci-providers)
