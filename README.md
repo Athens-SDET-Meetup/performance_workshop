@@ -517,6 +517,35 @@ k6 calls `handleSummary()`` at the end of the test lifecycle.
 
 You can learn more about this [in our docs](https://k6.io/docs/results-output/end-of-test/custom-summary/).
 
+#### (2.8.5) Web dashboard
+
+The test result summary is useful; however aggregated results hide a lot of information as they don’t show how the metrics change during the test execution. 
+
+It is more useful to visualize time-series graphs to understand what happened at different stages of the test. To solve this, k6 has different `Outputs`. These let you export your metrics/logs to some other place in real-time.  
+
+Note that you should set a test duration to at least 30 seconds to receive enough data to visualize a graph. Then, enable the web dashboard by setting the `K6_WEB_DASHBOARD` environment variable to `true` when running your test script as follows:
+
+```bash
+K6_WEB_DASHBOARD=true k6 run test.js
+```
+
+<details>
+<summary>Docker run</summary>
+
+```bash
+docker run -p 5665:5665 -i --network=performance_workshop_default grafana/k6:latest run -e BASE_URL=http://quickpizza:3333 -e K6_WEB_DASHBOARD=true  - <test.js 
+```
+
+</details>
+
+<br/>
+
+By default, the web dashboard is available at http://127.0.0.1:5665.
+
+![Web dashboard](./media/web-dashboard-overview.png)
+
+To learn about the distinct dashboard options, refer to the [Web dashboard documentation](https://grafana.com/docs/k6/latest/results-output/web-dashboard/).
+
 ## (3) Running k6 in CI
 
 ### (3.1) GitHub Actions :octocat:
