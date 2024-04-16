@@ -9,6 +9,8 @@ export const options = {
   scenarios: {
     constant_request_rate: {
       exec: "getPizza",
+      //With the constant-arrival-rate executor, k6 starts a fixed number of iterations over a specified period of time. 
+      //It is an open-model executor, meaning iterations start independently of system response
       executor: 'constant-arrival-rate',
       duration: '30s',
 
