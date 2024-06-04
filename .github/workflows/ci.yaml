@@ -15,18 +15,11 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
 
       - name: Run local k6 test
-        uses: grafana/k6-action@v0.2.0
+        uses: grafana/k6-action@v0.3.1
         with:
           filename: script.js
         env:
           BASE_URL: "http://quickpizza:3333"
-          K6_WEB_DASHBOARD: true
-          K6_WEB_DASHBOARD_EXPORT: html-report.html
-      - name: Upload Report
-        uses: actions/upload-artifact@v4
-        with:
-          name: report
-          path: html-report.html # or path/to/artifact
