@@ -16,13 +16,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Install k6
         run: |
           curl https://github.com/grafana/k6/releases/download/v0.47.0/k6-v0.47.0-linux-amd64.tar.gz -L | tar xvz --strip-components 1
 
       - name: Run Tests
         run: |
-          K6_WEB_DASHBOARD=true K6_WEB_DASHBOARD_EXPORT=html-report.html ./k6 run script.js --env BASE_URL=http://quickpizza:3333
+          set 6_WEB_DASHBOARD=true K6_WEB_DASHBOARD_EXPORT=html-report.html 
+          ./k6 run script.js --env BASE_URL="http://quickpizza:3333"
 
       - name: Upload Report
         uses: actions/upload-artifact@v4
