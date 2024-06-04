@@ -23,3 +23,10 @@ jobs:
           filename: script.js
         env:
           BASE_URL: "http://quickpizza:3333"
+          K6_WEB_DASHBOARD: true
+          K6_WEB_DASHBOARD_EXPORT: html-report.html
+      - name: Upload Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: path/to/artifact/ # or path/to/artifact
