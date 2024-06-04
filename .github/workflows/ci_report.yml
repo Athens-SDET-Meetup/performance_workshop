@@ -1,0 +1,31 @@
+name: Testing QuickPizza and uploading report
+on:
+  #   - push
+  - workflow_dispatch
+
+jobs:
+  runner-job:
+    runs-on: ubuntu-latest
+
+    services:
+      quickpizza:
+        image: ghcr.io/grafana/quickpizza-local:0.2.0
+        ports:
+          - 3333:3333
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install k6
+        run: |
+          curl https://github.com/grafana/k6/releases/download/v0.47.0/k6-v0.47.0-linux-amd64.tar.gz -L | tar xvz --strip-components 1
+
+      - name: Run Tests
+        run: |
+          K6_WEB_DASHBOARD=true K6_WEB_DASHBOARD_EXPORT=html-report.html ./k6 run script.js --env BASE_URL=http://quickpizza:3333
+
+      - name: Upload Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: report
+          path: html-report.html # or path/to/artifact
